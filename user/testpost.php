@@ -9,7 +9,7 @@
 include "classes/userAction.php";
 include "config.php";
 
-if (isset($_POST['connection']) && ($_POST['usersTable']) && $_POST['first_name']) && isset($_POST['last_name']) && isset($_POST['password']) && isset($_POST['email']))
+if (isset($_POST['connection']) && ($_POST['usersTable']) && ($_POST['first_name']) && isset($_POST['last_name']) && isset($_POST['password']) && isset($_POST['email']))
 
 {
     $userPassword = md5($_POST['password']);
