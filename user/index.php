@@ -6,17 +6,16 @@
  * Time: 11:18 PM
  */
 
-include "classes/connectDB.php";
+include "classes/userAction.php";
 include "config.php";
 
-$connectDB = new connectDB();
+$connectDB = new userAction();
 $objConnection = $connectDB->connect($serverName,$user,$password,$database);
 $objResultQuery = $connectDB->query($usersTable,$objConnection);
 $data = $connectDB->show_results($objResultQuery);
 
 
 ?>
-    <!DOCTYPE html>
     <html lang="en">
     <head>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
@@ -58,7 +57,14 @@ $data = $connectDB->show_results($objResultQuery);
             <p>
                 <a class="btn btn-primary btn-lg" href="login.php" role="button">Iniciar Sesión (Login)</a>
                 <a class="btn btn-primary btn-lg" href="register.php" role="button">Registrarse</a>
-                <a class="btn btn-primary btn-lg" href="show_users.php" role="button">Administrar Usuarios</a>
+                <a class="btn btn-primary btn-lg" href="manage_users.php" role="button">Administrar Usuarios</a>
+                <h3>Web Services</h3>
+                <a class="btn btn-primary btn-lg" href="login.php" role="button">Login</a>
+                <a class="btn btn-primary btn-lg" href="create.php" role="button">Create</a>
+                <a class="btn btn-primary btn-lg" href="update.php" role="button">Update</a>
+                <a class="btn btn-primary btn-lg" href="delete.php" role="button">Delete</a>
+                <a class="btn btn-primary btn-lg" href="list.php" role="button">List</a>
+
             </p>
         </div>
     </div>

@@ -1,6 +1,5 @@
 <? session_start(); ?>
 
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
@@ -27,7 +26,7 @@
                 <li><a href="index.php">Inicio</a></li>
                 <li><a href="login.php">Iniciar Sesión</a></li>
                 <li class="active"><a href="register.php">Registrarse</a></li>
-                <li><a href="show_users.php.php">Administrar Usuarios</a></li>
+                <li><a href="manage_users.php">Administrar Usuarios</a></li>
             </ul>
         </div>
     </div>

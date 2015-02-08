@@ -16,7 +16,6 @@ $data = $connectDB->show_results($objResultQuery);
 
 
 ?>
-<!DOCTYPE html>
 <html lang="en">
     <head>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
@@ -80,4 +79,4 @@ $data = $connectDB->show_results($objResultQuery);
     </div>
 </body>
 </html>
-<?php
+<?
