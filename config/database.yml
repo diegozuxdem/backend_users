@@ -1,0 +1,9 @@
+db:
+    dev:
+        host: localhost
+        user: devdem
+        password: yurglazbr0uken666
+        database: rti1
+
+    users:
+        table: users_rti1
