@@ -55,11 +55,11 @@ $data = $connectDB->show_results($objResultQuery);
             <h1>Bienvenido al módulo de usuarios</h1>
             <p>En este módulo podrá ingresar al sistema, registrar y administrar usuarios</p>
             <p>
-                <a class="btn btn-primary btn-lg" href="login.php" role="button">Iniciar Sesión (Login)</a>
+                <a class="btn btn-primary btn-lg" href="login_user.php" role="button">Iniciar Sesión (Login)</a>
                 <a class="btn btn-primary btn-lg" href="register.php" role="button">Registrarse</a>
                 <a class="btn btn-primary btn-lg" href="manage_users.php" role="button">Administrar Usuarios</a>
                 <h3>Web Services</h3>
-                <a class="btn btn-primary btn-lg" href="login.php" role="button">Login</a>
+                <a class="btn btn-primary btn-lg" href="login_user.php" role="button">Login</a>
                 <a class="btn btn-primary btn-lg" href="create.php" role="button">Create</a>
                 <a class="btn btn-primary btn-lg" href="update.php" role="button">Update</a>
                 <a class="btn btn-primary btn-lg" href="delete.php" role="button">Delete</a>

@@ -37,7 +37,7 @@
                 <li class="active"><a href="#">Inicio</a></li>
                 <li><a href="#about">Perfil</a></li>
                 <li><a href="#contact">Configuración</a></li>
-                <li><a href="login.php">Salir</a></li>
+                <li><a href="login_user.php">Salir</a></li>
             </ul>
         </div><!--/.nav-collapse -->
     </div>

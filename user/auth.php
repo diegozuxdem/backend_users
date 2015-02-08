@@ -18,6 +18,6 @@ $session = $connectDB->auth($connection,$usersTable,$_POST['username'],$_POST['p
 if($session){
     include "welcome.php";
 } else {
-    header( 'Location: login.php' );
+    header( 'Location: login_user.php' );
     exit();
 }

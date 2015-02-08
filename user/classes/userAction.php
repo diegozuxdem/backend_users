@@ -70,6 +70,36 @@ class userAction {
 
     }
 
+    public function login($connect,$dbTable,$username,$password) {
+
+        try
+        {
+            $sql = "SELECT * FROM $dbTable WHERE email='$username' AND  password='".md5($password)."'";
+            $result = $connect->query( $sql );
+            $row = $result->fetch_assoc();
+            if($row["id"] > 0) {
+                session_start();
+                $_SESSION['userId'] = $row["id"];
+                $_SESSION['username'] = $username;
+                $_SESSION['first_name'] = $row["first_name"];
+                $_SESSION['last_name'] = $row["last_name"];
+
+                $response["status"]=1;
+                $response["user"]=$_SESSION;
+                header('Content-Type: application/json');
+                return(json_encode($response));
+            } else {
+                throw new Exception('Username or password is wrong');
+            }
+
+        }
+        catch(Exception $e)
+        {
+            echo $e->getMessage();
+        }
+
+    }
+
     public function register($connect,$dbTable,$first_name,$last_name,$email,$password) {
 
         try
