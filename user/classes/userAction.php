@@ -178,6 +178,7 @@ class userAction {
             $readUser = "SELECT * FROM $dbTable WHERE email = '".$email."'";
             $resultReadUser = $connect->query( $readUser );
             $rowUser = $resultReadUser->fetch_assoc();
+            $userPassword = md5($password);
 
             if ($rowUser["email"])
             {
@@ -195,10 +196,10 @@ class userAction {
                 if(empty($password)){
                     $password = $rowUser["password"];
                 } else {
-                    $response["new_password"] = $password;
+                    $response["new_password"] = $userPassword;
                 }
 
-                $updateUser = "UPDATE $dbTable SET first_name='".$first_name."', last_name='".$last_name."', password='".$password."' WHERE email = '".$email."'";
+                $updateUser = "UPDATE $dbTable SET first_name='".$first_name."', last_name='".$last_name."', password='".$userPassword."' WHERE email = '".$email."'";
                 $resultQuery = $connect->query( $updateUser );
                 $response["query_status"]=$resultQuery;
 

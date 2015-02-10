@@ -11,14 +11,14 @@ include "config.php";
 
 $connectDB = new userAction();
 $connection = $connectDB->connect($serverName,$user,$password,$database);
-$userPassword = md5($_POST['password']);
 
-if (isset($_POST['btn_update']) && $_POST['first_name'] && $_POST['last_name'] && $_POST['email'])
+
+if (isset($_POST['btn_update']) && $_POST['email'])
 {
-    $update = $connectDB->update($connection,$usersTable,$_POST['first_name'],$_POST['last_name'],$_POST['email'],$userPassword);
+    $update = $connectDB->update($connection,$usersTable,$_POST['first_name'],$_POST['last_name'],$_POST['email'],$_POST['password']);
     echo($update);
 
-} elseif(isset($_POST['first_name']) && $_POST['last_name'] && $_POST['email']) {
-    $update = $connectDB->update($connection,$usersTable,$_POST['first_name'],$_POST['last_name'],$_POST['email'],$userPassword);
+} elseif(isset($_POST['email'])) {
+    $update = $connectDB->update($connection,$usersTable,$_POST['first_name'],$_POST['last_name'],$_POST['email'],$_POST['password']);
     echo($update);
 }

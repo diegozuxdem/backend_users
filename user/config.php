@@ -16,9 +16,9 @@
     $usersTable = $dbParams[db][users]['table'];
     */
 
-    $serverName = localhost;
-    $user = devdem;
-    $password = yurglazbr0uken666;
-    $database = rti1;
-    $usersTable = users_rti1;
+    $serverName = 'localhost';
+    $user = 'devdem';
+    $password = 'yurglazbr0uken666';
+    $database = 'rti1';
+    $usersTable = 'users_rti1';
 

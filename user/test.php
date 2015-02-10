@@ -29,13 +29,15 @@ $result=curl_exec($ch);
 curl_close($ch);
 var_dump(json_decode($result, true));
 
+// enviar la informacion encodeada con json por post a vista de administracion
+
 echo("---------------------------------------------------------------------------");
 echo("---------------------------------------------------------------------------");
 echo("<br/> TEST CREATE METHOD AND PRINT OUTPUT <br/>");
 echo("\n");
 
 $urlCreate = "http://php.botshell.net/user/create.php";
-$paramsCreate = 'first_name=Edwin&last_name=Vallejo&email=edwinvallejo3@gmail.com&password=12345';
+$paramsCreate = 'first_name=EdwinAlbeiro&last_name=Vallejoxxxxxxx&email=edwinvallejo6@gmail.com&password=12345';
 
 $chCreate = curl_init( $urlCreate );
 curl_setopt( $chCreate, CURLOPT_POST, 1);
@@ -46,13 +48,15 @@ curl_setopt( $chCreate, CURLOPT_RETURNTRANSFER, 1);
 
 $responseCreate = curl_exec( $chCreate );
 print_r($responseCreate);
+
+
 echo("---------");
 echo("---------");
 echo("<br/> TEST UPDATE METHOD AND PRINT OUTPUT <br/>");
 echo("\n");
 
 $urlUpdate = "http://php.botshell.net/user/update.php";
-$paramsUpdate = 'first_name=NewDiego&last_name=NewAmayix&email=edwinvallejo@gmail.com&password=12345';
+$paramsUpdate = 'first_name=EdwinAlbeiro2&last_name=Velandia&email=edwinvallejo6@gmail.com&password=12345';
 
 $chUpdate = curl_init( $urlUpdate );
 curl_setopt( $chUpdate, CURLOPT_POST, 1);
@@ -64,16 +68,18 @@ curl_setopt( $chUpdate, CURLOPT_RETURNTRANSFER, 1);
 $responseUpdate = curl_exec( $chUpdate );
 var_dump(json_decode($responseUpdate, true));
 echo("---------");
+
+
 echo("---------");
 echo("<br/> TEST DELETE METHOD AND PRINT OUTPUT <br/>");
 echo("\n");
 
 $urlDelete = "http://php.botshell.net/user/delete.php";
-$paramsDelete = 'email=edwinvallejo2@gmail.com';
+$paramsDelete = 'email=edwinvallejo5@gmail.com';
 
 $chDelete = curl_init( $urlDelete );
 curl_setopt( $chDelete, CURLOPT_POST, 1);
-curl_setopt( $chDelete, CURLOPT_POSTFIELDS, "email=edwinvallejo2@gmail.com");
+curl_setopt( $chDelete, CURLOPT_POSTFIELDS, $paramsDelete);
 curl_setopt( $chDelete, CURLOPT_FOLLOWLOCATION, 1);
 curl_setopt( $chDelete, CURLOPT_HEADER, 0);
 curl_setopt( $chDelete, CURLOPT_RETURNTRANSFER, 1);
@@ -86,7 +92,7 @@ echo("<br/> TEST LOGIN METHOD AND PRINT OUTPUT <br/>");
 echo("\n");
 
 $urlLogin = "http://php.botshell.net/user/login.php";
-$paramsLogin = 'username=jgibson0@oracle.com&password=12345';
+$paramsLogin = 'username=edwinvallejo6@gmail.com&password=12345';
 
 $chLogin = curl_init( $urlLogin );
 curl_setopt( $chLogin, CURLOPT_POST, 1);
