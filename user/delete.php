@@ -12,9 +12,12 @@ include "config.php";
 $connectDB = new userAction();
 $connection = $connectDB->connect($serverName,$user,$password,$database);
 
-if (isset($_POST['btn_delete']))
+if (isset($_POST['btn_delete']) && $_POST['email'])
 {
     $delete = $connectDB->delete($connection,$usersTable,$_POST['email']);
     echo($delete);
 
+} elseif(isset($_POST['email'])) {
+    $delete = $connectDB->delete($connection,$usersTable,$_POST['email']);
+    echo($delete);
 }
